@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mini hospital (mock up)</title>
+        <style>
+            /* screen */
+            .screen
+            {
+                width: 2000px;
+                height: 775px;
+                display: table-cell;
+                background-color:  #CAD3F5;
+            }
+            /* font */
+            .header_XL
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 700%;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bolder;
+            }
+            .header_L
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 500%;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bolder;
+            }
+            .header_M
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 200%;
+                font-weight: bolder;
+            }
+            .text_M
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 300%;
+                text-align: left;
+                vertical-align: left;
+            }
+            .text_S
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 200%;
+                text-align: left;
+                vertical-align: left;
+            }
+
+
+
+            /* hilight */
+            .group
+            {
+                background-color: rgb(163, 219, 200);
+            }
+
+            /* button */
+            .button {
+            appearance: none;
+            background-color: #FAFBFC;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+            box-sizing: border-box;
+            color: #24292E;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 20px;
+            list-style: none;
+            padding: 15px 25px;
+            position: relative;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
+            }
+            
+            .button:hover {
+            background-color: #F3F4F6;
+            text-decoration: none;
+            /* transition-duration: 0.1s; */
+            }
+
+            .button:active {
+            background-color: #EDEFF2;
+            box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+            /* transition: none 0s; */
+            }
+
+            .button:c{
+            background-color: #213DA4 ;
+         
+            }
+
+        </style>
+
+           <!-- icon -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            
+            function change()
+            {
+                window.open("http://www.w3ii.com");
+            }
+
+            function select()
+            {
+                let all_symtom=[ ];
+                let symtom_list=document.getElementsByName('symtoms');
+                symtom_list.forEach(item => {//loop all the checkbox item
+                    if(item.checked) { //if the check box is checked
+                        all_symtom+=item.value;
+                    }
+                })
+                // alert(all_symtom);
+    if(all_symtom=="" )
+    {
+        alert("คุณร่างกายปกติดี^^");
+    }
+    else
+    {
+        while(true)
+    {
+        
+        if (all_symtom.match("a"))
+        {
+            if(all_symtom.match("b"))
+            {
+                if(all_symtom.match("c"))
+                {
+                    if (confirm("คุณมีประวัติสัมผัสกับผู้ป่วยยืนยันโรคติดเชื้อไวรัส COVID-19 ภายในหนึ่งสัปดาห์นี้หรือไม่") == true) {
+                        alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                        break;
+                    }
+                    alert("คุณมีเสี่ยงที่จะเป็นโควิด เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                    break;
+                }
+                if (confirm("คุณมีประวัติสัมผัสกับผู้ป่วยยืนยันโรคติดเชื้อไวรัส COVID-19 ภายในหนึ่งสัปดาห์นี้หรือไม่") == true) {
+                        alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                        break;
+                    }
+                alert("คุณมีโอกาสเป็นไข้หวัด \nเเต่เนื่องจากการระบาดของโรค COVID-19เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR เเละคอยตรวจสอบอาการ");
+                break;
+            }
+            if(all_symtom.match("c"))
+                {
+                    if (confirm("คุณมีประวัติสัมผัสกับผู้ป่วยยืนยันโรคติดเชื้อไวรัส COVID-19 ภายในหนึ่งสัปดาห์นี้หรือไม่") == true) {
+                        alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                        break;
+                    }
+                    alert("คุณมีเสี่ยงที่จะเป็นโควิด เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                    break;
+                }
+            if (confirm("คุณมีประวัติสัมผัสกับผู้ป่วยยืนยันโรคติดเชื้อไวรัส COVID-19 ภายในหนึ่งสัปดาห์นี้หรือไม่") == true) 
+            {
+                alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                        break;
+            } 
+            else if (confirm("คุณมีอาการเเบบนี้เป็นๆหายๆเป็นเวลานาน") == true)
+            {
+                alert("คุณมีโอกาสเป็นภูมิเเพ้ \nเเต่เนื่องจากการระบาดของโรค COVID-19เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR เเละคอยตรวจสอบอาการ \nคําเเนะนํา: ควรปรึกษาเเพทย์ด้านโรคภูมิเเพ้เพื่อทําการวินิจฉัยเเละรักษา");
+                break;
+            }
+            else
+            {
+                alert("คุณมีโอกาสเป็นไข้หวัด \nเเต่เนื่องจากการระบาดของโรค COVID-19เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR เเละคอยตรวจสอบอาการ");
+                break;
+            }
+        }
+        
+        if(all_symtom.match("b"))
+        {
+            if (all_symtom.match("b2"))
+            {
+                if (confirm("เมื่อไม่นานมานี้คุณได้ทํากิจกรรมที่ต้องออกแรงอย่างหนัก เช่น ออกกำลังกายอย่างหนัก ยกของหนัก ลากของหนักเป็นเวลานานๆหรือไม่") == true) {
+                        alert("1.หยุดพักเพื่อให้ร่างกายได้ซ่อมแซม และทานอาหารประเภทโปรตีนให้มากขึ้นเพื่อช่วยเร่งในกระบวนการซ่อมแซมส่วนที่สึกหรอ \n2.ดื่มน้ำให้มาก เพื่อเพิ่มออกซิเจนในร่างกาย ซึ่งช่วยลดอาการปวดเมื่อย และอาการชาลงได้ \n3.พักผ่อนให้เต็มที่เพื่อให้กล้ามเนื้อได้ฟื้นฟูขึ้นอย่างมีประสิทธิภาพ");
+                        break;} 
+                else if (confirm("คุณนอนไม่หลับ พักผ่อนไม่เพียงพอเนื่องจากอาการเมื่อยหรือไม่") == true) {
+                        alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                        break;}
+                else if (confirm("คุณมีอาการเวียนศรีษะ สับสนมึนงงหรือไม่") == true) {
+                        alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                        break;}
+                else if (confirm("สายตาพร่ามัว มองเห็นเป็นภาพเบลอ") == true) {
+                        alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                        break;}
+                else if (confirm("เจ็บหน้าอก แน่นหน้าอก") == true) {
+                        alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                        break;}
+                else  alert("อาการเมื่อยอาจเกิดจากลักษณะการใช้ชีวิต การทำกิจกรรมในใช้ชีวิตประจำวัน การรักษาทางการแพทย์ หรืออาจเกิดจากการเจ็บป่วยด้วยโรคและปัญหาสุขภาพต่าง ๆ ทั้งทางร่างกายและจิตใจ คําเเนะนําเพิ่ม:หากผู้ป่วยมีอาการเมื่อยล้าอย่างเรื้อรังยาวนานกว่า 2 สัปดาห์ โดยที่อาการไม่ดีขึ้นแม้จะผ่านการนอนหลับพักผ่อนอย่างเพียงพอ รับประทานอาหารที่ดีต่อสุขภาพ และผ่อนคลายความตึงเครียดไปแล้ว ควรรีบไปพบแพทย์เพื่อทำการตรวจรักษา")
+                      break;
+            }
+        
+            if (confirm("คุณมีประวัติสัมผัสกับผู้ป่วยยืนยันโรคติดเชื้อไวรัส COVID-19 ภายในหนึ่งสัปดาห์นี้หรือไม่") == true) 
+            {
+                alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                        break;
+            } else 
+            {
+                alert("คุณมีโอกาสเป็นไข้หวัด \nเเต่เนื่องจากการระบาดของโรค COVID-19เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR เเละคอยตรวจสอบอาการ")
+                break;
+            }
+            if(all_symtom.match("c"))
+            {
+                alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                break;
+            }
+    
+        }
+        if(all_symtom.match("c"))
+        {
+            if(all_symtom.match("c1"))
+            {
+                if (confirm("คุณมีประวัติสัมผัสกับผู้ป่วยยืนยันโรคติดเชื้อไวรัส COVID-19 ภายในหนึ่งสัปดาห์นี้หรือไม่") == true) 
+                {
+                    alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                    break;
+                } 
+                    if (confirm("คุณได้ออกไปในสถานที่ที่มีผู้คนเยอะหรือเสี่ยงต่อการติดเชื้อหรือไม่") == true) 
+                    {
+                    alert("คุณมีเสี่ยงที่จะเป็นโควิด \nเพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR ปฏิบัติตามมาตรการ COVID-19\n");
+                    break;
+                    } 
+
+                    alert("คุณมีโอกาสเป็นไข้หวัด \nเเต่เนื่องจากการระบาดของโรค COVID-19เพื่อความปลอดภัยของคุณเเละคนรอบข้างเเนะนําให้ตรวจ ATK หรือ PCR เเละคอยตรวจสอบอาการ \nคําเเนะนําเพิ่มเติม : ควรปรึกษาเเพทย์เพิ่มเติมเกี่ยวกับอาการ")
+                    break;
+            }
+            else
+            {
+            if (confirm("เมื่อไม่นานมานี้คุณได้ทํากิจกรรมที่ต้องออกแรงอย่างหนัก เช่น ออกกำลังกายอย่างหนัก ยกของหนัก ลากของหนักเป็นเวลานานๆหรือไม่") == true) 
+            {
+                    alert("1.หยุดพักเพื่อให้ร่างกายได้ซ่อมแซม และทานอาหารประเภทโปรตีนให้มากขึ้นเพื่อช่วยเร่งในกระบวนการซ่อมแซมส่วนที่สึกหรอ \n2.ดื่มน้ำให้มาก เพื่อเพิ่มออกซิเจนในร่างกาย ซึ่งช่วยลดอาการปวดเมื่อย และอาการชาลงได้ \n3.พักผ่อนให้เต็มที่เพื่อให้กล้ามเนื้อได้ฟื้นฟูขึ้นอย่างมีประสิทธิภาพ");
+                    break;} 
+            else if (confirm("คุณนอนไม่หลับ พักผ่อนไม่เพียงพอเนื่องจากอาการเมื่อยหรือไม่") == true) {
+                    alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                    break;}
+            else if (confirm("คุณมีอาการเวียนศรีษะ สับสนมึนงงหรือไม่") == true) {
+                    alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                    break;}
+            else if (confirm("สายตาพร่ามัว มองเห็นเป็นภาพเบลอ") == true) {
+                    alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                    break;}
+            else if (confirm("เจ็บหน้าอก แน่นหน้าอก") == true) {
+                    alert("คําเเนะนําเพิ่มเติม: เมื่อผู้ป่วยมีนี้เกิดขึ้นร่วมกับอาการเมื่อย ควรไปพบแพทย์เพื่อทำการตรวจรักษา หากผู้ป่วยไม่สามารถช่วยเหลือตนเองได้ หรือต้องการความช่วยเหลือ ควรรีบขอความช่วยเหลือจากผู้อื่นเพื่อให้นำส่งแพทย์อย่างทันท่วงทีต่อไป");
+                    break;}
+            else  alert("อาการเมื่อยอาจเกิดจากลักษณะการใช้ชีวิต การทำกิจกรรมในใช้ชีวิตประจำวัน การรักษาทางการแพทย์ หรืออาจเกิดจากการเจ็บป่วยด้วยโรคและปัญหาสุขภาพต่าง ๆ ทั้งทางร่างกายและจิตใจ คําเเนะนําเพิ่ม:หากผู้ป่วยมีอาการเมื่อยล้าอย่างเรื้อรังยาวนานกว่า 2 สัปดาห์ โดยที่อาการไม่ดีขึ้นแม้จะผ่านการนอนหลับพักผ่อนอย่างเพียงพอ รับประทานอาหารที่ดีต่อสุขภาพ และผ่อนคลายความตึงเครียดไปแล้ว ควรรีบไปพบแพทย์เพื่อทำการตรวจรักษา")
+                    break;}
+            }
+            }
+            
+    }
+
+    }
+   
+        </script>
+    </head>
+    <body>
+       <div class="screen">
+           <div class="header_L" style="color:#213DA4 ">อาการ</div><br>
+           <center>
+           <!-- <span class="button">nasal congestion</span>
+           <span class="button">cough</span>
+           <span class="button">sore throat</span>
+           <span class="button">weary</span>
+           <span class="button">fever</span>
+           <span class="button">phlegm</span>
+           <span class="button">itchy throat</span>
+           <span class="button">body aches</span> -->
+
+           <form>
+            <center><div class="header_M" style="color:#213DA4" >คุณมีอาการอะไรบ้าง:</div></center><br>
+            <input type="checkbox" name="symtoms" value="a1"> <span class="text_S" >คัดจมูก</span><br>
+            <input type="checkbox" name="symtoms" value="a2"> <span class="text_S">ไอ</span><br>
+            <input type="checkbox" name="symtoms" value="b1"> <span class="text_S">เจ็บคอ</span><br>
+            <input type="checkbox" name="symtoms" value="b2"> <span class="text_S">อ่อนเพลีย</span><br>
+            <input type="checkbox" name="symtoms" value="b3"> <span class="text_S">ไข้</span><br>
+            <input type="checkbox" name="symtoms" value="b4"> <span class="text_S">เสมหะ</span><br>
+            <input type="checkbox" name="symtoms" value="c1"> <span class="text_S">คันคอ</span><br>
+            <input type="checkbox" name="symtoms" value="c2"> <span class="text_S">เมื่อยเนื้อเมื่อยตัว</span><br><br>
+            <div class="button" style="color:#213DA4" onclick="select()">ต่อไป</div>
+           </form>
+        <br><br><br><br><br>
+           <div class="text_M">
+           <a href=./welcome.html>
+           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#213DA4" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+           </div>
+       </div>
+    </body>
+</html>

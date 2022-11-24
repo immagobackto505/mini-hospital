@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mini hospital (input)</title>
+        <style>
+            /* screen */
+            .screen
+            {
+                width: 2000px;
+                height: 775px;
+                display: table-cell;
+                background-color: #CAD3F5;
+                align-content: center;
+            }
+            .block1
+            {
+                /* width: 725px; */
+                /* height: 775px; */
+                display: table-cell;
+                background-color: #CAD3F5;   
+                align-self: center;      
+            }
+            /* font */
+            .header_XL
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 700%;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bolder;
+            }
+            .header_L
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 500%;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bolder;
+            }
+            .header_M
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 300%;
+                text-align: left;
+                vertical-align: left;
+                font-weight: bolder;
+            }
+            .text_M
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 300%;
+                text-align: left;
+                vertical-align: left;
+            }
+            .text_S
+            {
+                font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+                font-size: 200%;
+                text-align: left;
+                vertical-align: left;
+            }
+
+
+
+            /* hilight */
+            .group
+            {
+                background-color: rgb(163, 219, 200);
+            }
+
+            /* button */
+            .button {
+            appearance: none;
+            background-color: #FAFBFC;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+            box-sizing: border-box;
+            color: #24292E;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 20px;
+            list-style: none;
+            padding: 15px 25px;
+            position: relative;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
+            }
+            
+            .button:hover {
+            background-color: #F3F4F6;
+            text-decoration: none;
+            transition-duration: 0.1s;
+            }
+
+            .button:disabled {
+            background-color: #FAFBFC;
+            border-color: rgba(27, 31, 35, 0.15);
+            color: #959DA5;
+            cursor: default;
+            }
+
+            .button:active {
+            background-color: #EDEFF2;
+            box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+            transition: none 0s;
+            }
+
+            .button:focus {
+            outline: 1px transparent;
+            }
+
+            .button:before {
+            display: none;
+            }
+
+            .button:-webkit-details-marker {
+            display: none;
+            }
+
+        
+        </style>
+
+           <!-- icon -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            function change()
+            {
+                window.open("http://127.0.0.1:3000/mini_hospital/symtoms01.html");
+            }
+        </script>
+    </head>
+    <body>
+        <div class ="screen">
+        <div class="block1">
+            <div class="header_M" style="color: #213DA4;">ข้อมูลร่างกาย</div><br>
+            <form>
+                <div class="text_S">
+                   นํ้าหนัก : <input type="text" id="Weight"> &nbsp;<br>
+                   ส่วนสูง : <input type="text" id="Height"> &nbsp;<br>
+                   ค่าออกซิเจน : <input type="text" id="Oxygen"> &nbsp;<br>
+                   ความดัน: <input type="text" id="Blood_pressure"> &nbsp;<br>
+                   อัตราเต้นของหัวใจ: <input type="text" id="Heart_rate"> &nbsp;<br>
+                   ค่า Bmi:<br>
+                   <center><div style="color: #213DA4" class="button" onclick="change()">ต่อไป</div></center>
+                </div>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
